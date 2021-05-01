@@ -1,2 +1,2 @@
-# ut-scheduler
-A web app to generate optimal class schedules based on webscraped course information
+# UT Scheduler API
+Back-end server and API using Falcon (Python)

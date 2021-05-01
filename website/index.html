@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UT Schedule Generator</title>
+    <meta name="description" content="A simple UT schedule generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/vendor/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+</head>
+<body>
+<h1>UT Schedule Generator</h1>
+<section class="wrapper clearfix">
+    <div class="col-sm-8 calendar">
+        <div id="calendar"></div>
+        <div id="schedule-controls">
+            <div style="float: left;">
+                <div id="number-generated"></div>
+            </div>
+            <div style="float: right">
+                <button class="btn btn-warning" onclick="generateSchedules()">Generate Schedules</button>
+                <button class="btn btn-success" onclick="showNextSchedule()">Next Schedule</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 controls">
+        <select id="majors" class="selectpicker" data-live-search="true" data-width="100%"></select>
+        <select id="courses" class="selectpicker" data-live-search="true" data-width="100%"></select>
+
+        <button class="btn btn-info" onclick="addCourse()">Add Class</button>
+        <button class="btn btn-danger" onclick="clearCourses()">Clear All</button>
+        <div id="time-slider" /></div>
+        <h2>Selected Courses:</h2>
+        <ul id="selected-courses">
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p class="text-muted">feedback: <a href="mailto:ideas@connorbyron.com">ideas@connorbyron.com</a></p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-89234703-1', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>

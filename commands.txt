@@ -1,0 +1,16 @@
+aws configure
+
+# Download
+aws s3 sync s3://connorbyron.com .
+
+# Download (with deleting extra unnecessary files)
+aws s3 sync --delete s3://connorbyron.com .
+
+# Upload
+aws s3 sync . s3://connorbyron.com
+
+# ElasticBeanstalk deploy
+eb deploy
+
+# Scrapy
+scrapy crawl classes

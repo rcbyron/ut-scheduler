@@ -1,0 +1,20 @@
+branch-defaults:
+  default:
+    environment: scheduler-env
+environment-defaults:
+  scheduler-env:
+    branch: null
+    repository: null
+global:
+  application_name: UT Scheduler
+  default_ec2_keyname: HomeInstance
+  default_platform: arn:aws:elasticbeanstalk:us-west-1::platform/Python 3.4 running
+    on 64bit Amazon Linux/2.5.0
+  default_region: us-west-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: null
+  sc: null
+  workspace_type: Application
